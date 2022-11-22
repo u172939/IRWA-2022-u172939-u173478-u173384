@@ -21,6 +21,12 @@ All necessary imports are in the 'Import libraries' section
 - dcg_at_k(y_true, y_score,  k=10): float
 - ndcg_at_k(y_true, y_score, k=10): float
 
+- embedding_w2v(terms, wv: vector of floats
+- rank_Word2Vec(query, docs, doc_to_tweet, tweets): 2 lists (ranked docs, ranked scores)
+- search_word2vec(query, index, doc_to_tweet, tweets): 2 lists (ranked docs, ranked scores)
+- rankTweetsOurs(terms, index, idf, tf, tweets,doc_to_tweet): 2 lists (ranked docs, ranked scores)
+- rankTweetsBM25(query, tweets, idf, doc_to_tweet, N, k1=1.2, b=0.75): 2 lists (ranked docs, ranked scores)
+
 
 The rest of the code should execute correctly as everything that needed to be defined has been defined above
 
@@ -41,3 +47,7 @@ An example of a key-value pair from the output dictionary would be the following
 
 ## Output part 2
 The output of this second part of the project creates an indexing for the preprocessed documents. Then, creates a ranking of documents depending on a query. In the end, we evaluate the search system we built.
+
+## Output part 3
+The output of this third part is an evaluation of the ranking methods we have built. First of all we have the evaluation of our custom ranking method and the bm25 one. At the end, we have the results for the same queries of the last method: word2vector + cosine similarity.
+Fist, we need to create a dataset with our queries in order to iterate through it. We have created a dataset with a baseline with our 5 queries and the ground truth files for each query. This file is in this repository stored with the name queries_df_part3.csv, it is read in the notebook in order to do the  ranking and the evaluation.

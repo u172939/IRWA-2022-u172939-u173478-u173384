@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block page_title %}{{ page_title }}{% endblock %}
+{% block content %}
+<div class="jumbotron" >
+    <h2>
+      Information retrieval and web analytics 2022
+    </h2>
+    <p>
+      Type a query, choose a search algorith and click the search button 🔍️<br>
+    </p>
+    
+    
+  
+    <div class="centered">
+ 
+        <form class="d-flex" method="POST" onSubmit='return validate();' action="/search">
+            <input class="form-control me-2" name="search-query" type="search" placeholder="Search" aria-label="Search"
+                   autofocus="autofocus">
+            <select class="custom-select" name="searchType" id="searchType" style="width:auto;">
+            <option value="TF-IDF" selected>TF-IDF</option>
+            <option value="BM25">BM25</option>
+            <option value="MAGIC ALGORITH">MAGIC ALGORITHM</option>
+            <option value="WORD2VEC">WORD2VEC</option>
+            </select>
+            <button class="btn btn-dark" type="submit" onclick='this.form.submit();'>Search</button>
+            <input name="upf-irwa-hidden" type="hidden" value="123">
+        </form>
+
+    </div>
+</div>
+{% endblock %}

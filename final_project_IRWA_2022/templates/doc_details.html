@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Detail - IRWA Search Engine</title>
+</head>
+<body>
+<div><a href="#" onclick="history.go(-1)">Go Back</a></div>
+<div><a href="/stats" >Stats</a></div>
+<div><a href="/dashboard" >Dashboard</a></div>
+<hr>
+    <div class="pb-3">
+        <div style="background-color: rgba(90, 155, 77, 0.538); ; padding: 10px; border-radius: 10px; width:55%;">
+            <div class='centered', , style="font-size:30px">
+                Tweet: {{ tweet.full_text }}
+            </div>
+            <hr>
+            <div class='centered', style="color:black;font-size:20px">
+                {{tweet.doc_date}}
+            </div>
+            <hr>
+            <div class='centered', style="font-size:20px">
+                <cite> <a href="{{ tweet.url }}"> Link to tweet: {{ tweet.url }}</a></cite>
+            </div>
+            <hr>
+            <div class='centered', style="color:black;font-size:20px">
+                {{tweet.text}}
+            </div>
+            <hr>
+            <div class='centered', style="color:black;font-size:20px">
+                Hashtags: {{tweet.hashtags}}
+            </div>
+            <div class='centered', style="color:black;font-size:20px">
+                Likes: {{tweet.likes}}, Retweets: {{tweet.retweets}}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

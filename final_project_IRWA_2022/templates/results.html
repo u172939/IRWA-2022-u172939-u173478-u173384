@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block page_title %}{{ page_title }}{% endblock %}
+{% block content %}
+
+    Found <strong>{{ found_counter }}</strong> results... {{query}} using {{alg}} 
+    <hr>
+    {% for t in results_list %}
+    <div class="card text-bg-dark">
+        <div class="doc_title">
+            <a href="doc_details?id={{t.id}}&param2=2"><h5 class="card-header">{{t.full_text}}</h5></a>
+        </div>
+        
+        <div class="cited">
+            <cite> <a href="{{ t.url }}">{{ t.url }}</a></cite>
+        </div>
+        <div class="doc-score">
+            Score: {{t.ranking}}
+        </div>
+        <div class="doc-desc">
+            {{ t.date }} — {{ t.text }}
+        </div>
+    </div>
+  <br>
+
+    {% endfor %}
+{% endblock %}
+

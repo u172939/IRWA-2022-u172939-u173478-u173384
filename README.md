@@ -51,3 +51,11 @@ The output of this second part of the project creates an indexing for the prepro
 ## Output part 3
 The output of this third part is an evaluation of the ranking methods we have built. First of all we have the evaluation of our custom ranking method and the bm25 one. At the end, we have the results for the same queries of the last method: word2vector + cosine similarity.
 Fist, we need to create a dataset with our queries in order to iterate through it. We have created a dataset with a baseline with our 5 queries and the ground truth files for each query. This file is in this repository stored with the name queries_df_part3.csv, it is read in the notebook in order to do the  ranking and the evaluation.
+
+## FINAL PROJECT EXECUTION
+
+First of all it is important to have a conda environment in order to execute the main program locally. This should be created and update as told in the README that is inside the final_project_IRWA directory.
+- If you are executing it through Visual Studio Code you just have to open the web_app.py file, select the environment and run.
+- If you are using the terminal you have to go to the folder which contains the web_app.py file. Then, active the conda environment and run the program with the command: python web_app.py
+After all this, the app will be initiallized, you should wait a few minutes. Then some messages will appear in the terminal, copy the link that appears after Running on and copy it into an Internet searcher. The page will load and you will be free to use it then. To exit, write Control+C in the terminal.
+All necessary documents are in the folder.
